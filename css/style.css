@@ -138,20 +138,29 @@ main > section + section{ border-top: 1px solid var(--line); }
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 24px;
+  gap: 20px;
+  flex-wrap: wrap;
+  row-gap: 10px;
 }
 .brand{
   display: flex;
   align-items: center;
   flex-shrink: 0;
 }
-.brand img{ height: 44px; width: auto; }
-.brand .word{ display: none; } /* logo image already carries the wordmark */
+.brand .word{
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  line-height: 1.15;
+  color: var(--ink);
+  letter-spacing: -0.01em;
+}
+.brand .word span{ color: var(--pink); display: inline; }
 
 .main-nav{
   display: flex;
   align-items: center;
-  gap: 24px;
+  flex-wrap: wrap;
+  gap: 10px 20px;
   font-size: 0.92rem;
   font-weight: 500;
 }
@@ -199,6 +208,11 @@ main > section + section{ border-top: 1px solid var(--line); }
   width: 4px;
   border-radius: 2px;
   background: var(--pink);
+}
+.hero-logo{
+  height: 140px;
+  width: auto;
+  margin-bottom: 24px;
 }
 .hero h1{ margin-top: 10px; }
 .hero .lede{ margin-top: 20px; }
